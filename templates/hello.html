@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Howdy</title>
+  </head>
+  <body>
+      {% for name in names %}
+      <h1>
+        Hello {{name}}
+      </h1>
+      {% endfor %}
+     {% if img!="no" %}
+         <img height="100px" width="150px" src="https://blackgeoscientists.files.wordpress.com/2014/06/helloworld.jpg" alt="A cute Pic of a Dude on the World">
+      {% endif %}
+    <h2>How the heck are ya?</h2>
+  </body>
+</html>
