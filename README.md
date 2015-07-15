@@ -1,6 +1,6 @@
 ## Lesson Notes
 ###Syntax
-To add logic to a template, variables go between mustaches `{{variables}}` and code is embedded between curley brackets and percent signs {% code %} 
+To add logic to a template, variables go between mustaches `{{variables}}` and code is embedded between curly brackets and percent signs {% code %} 
 ```python
 <h1>{{name}}'s cart </h1>
 <table>
@@ -15,7 +15,7 @@ To add logic to a template, variables go between mustaches `{{variables}}` and c
   %>
 </table>
 ```
-### Looping through dictionaries
+### Looping through Dictionaries
 ```python
 <dl>
       {% for key, value in _dict.iteritems() %}
@@ -24,7 +24,7 @@ To add logic to a template, variables go between mustaches `{{variables}}` and c
       {% endfor %}
 </dl>
 ```
-### Looping through nested dictionaries
+### Looping through Nested Dictionaries
 ```python
 # a template variable, pets in main.py
 
@@ -44,12 +44,12 @@ pets = {'willie': {'kind': 'dog', 'owner': 'eric'},
 
 ##Logic in Templates Challenge
 ###Challenge
-Change our h2 to wish our user a great day. First, write a list containing the “good day” messages. Then use the get method to read a new template variable called msg_times. This number will be passed to our template so it knows  how many “good day” messages to show.
+Change our `<h2>` to wish our user a great day. First, write a list containing the “good day” messages. Then use the GET method to read a new template variable called `msg_times`. This number will be passed to our template so it knows  how many “good day” messages to show.
 
 * Add good_day_list to the HelloWorld handler
 good_day_list = [“Have a Great Day”, “Have en god dag!”, “ “Bonne journée !”, “Que pase un buen día!”]
 
-* Change the HelloWorld handler so that the new template variable msg_times can be read via the get method and passed to the template
+* Change the HelloWorld handler so that the new template variable, `msg_times` can be read via the GET method and passed to the template
 
 * Add loop logic to your template so that 
 `http://localhost:8080/helloworld?msg_num=2`
@@ -68,7 +68,7 @@ get handled appropriately.
 Create a brand new template and handler called GoodbyeWorld that renders an entirely new template, goodbyeworld.html. 
 * Include at least one conditional statement
 * Pass data from the GoodbyeWorld handler via the GET method url
-* Include a loop that prints outs Goodbye in many different languages. goodbye_list = [“Goodbye”,“Adios”, “Ciao”, “Arrivederci”]
+* Include a loop that prints outs 'Goodbye' in many different languages. goodbye_list = [“Goodbye”,“Adios”, “Ciao”, “Arrivederci”]
 * Make sure to edit the routes so that 
 `http://localhost:8080/helloworld`
 and
