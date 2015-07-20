@@ -4,45 +4,47 @@ To add logic to a template, variables go between mustaches `{{variables}}` and c
 ```python
 <h1>{{name}}'s cart </h1>
 <table>
-  <%
-  for item in items:
-    %>
+  {% for item in items:%}
     <tr>
-      <th>Name</th>
-      <td><%= item.name %></td>
+      <td>{{ item }}</td>
     </tr>
-    <%
-  %>
+    {% endfor%}
 </table>
 ```
+
 ### Looping through Dictionaries
 ```python
-<dl>
-      {% for key, value in _dict.iteritems() %}
-            <dt>{{ key }}</dt>
-            <dd>{{ value }}</dd>
+# template variale in main.py
+template_vars = {"pets" : {'willie':'horse', 'wilbur':'pig'}}
+#in pets.html
+<table>
+      {% for key, value in pets.items() %}
+            <tr>
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>
       {% endfor %}
-</dl>
+</table>
+
 ```
 ### Looping through Nested Dictionaries
 ```python
 # a template variable, pets in main.py
 
-pets = {'willie': {'kind': 'dog', 'owner': 'eric'},
+template_vars = {"pets" : {'willie': {'kind': 'dog', 'owner': 'eric'},
         'walter': {'kind': 'cockroach', 'owner': 'eric'},
-        'peso': {'kind': 'dog', 'owner': 'chloe'},
-        }
+        'peso': {'kind': 'dog', 'owner': 'chloe'},}}
 
 # in  pets.html
 <h1> Our pets</h1>
 {% for pet_name, pet_information in pets.items() %}
     <p>
-     {{pet_name.title()}} is a {{pet_information['kind']}} who is owned by {{pet_information['owner'])}}. 
-    </p>   
-{% endfor %}    
+     {{pet_name.title()}} is a {{pet_information['kind']}} who is owned by {{pet_information['owner']}}.
+    </p>
+{% endfor %} 
 ```
 
-##Logic in Templates Challenge
+###Logic in Templates Challenge
 ###Challenge
 Change our `<h2>` to wish our user a great day. First, write a list containing the “good day” messages. Then use the GET method to read a new template variable called `msg_times`. This number will be passed to our template so it knows  how many “good day” messages to show.
 
