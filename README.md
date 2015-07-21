@@ -8,7 +8,7 @@ To add logic to a template, variables go between mustaches `{{variables}}` and c
     <tr>
       <td>{{ item }}</td>
     </tr>
-    {% endfor%}
+    {% endfor %}
 </table>
 ```
 
