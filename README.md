@@ -1,6 +1,6 @@
 ## Lesson Notes
 ###Syntax
-To add logic to a template, variables go between mustaches `{{variables}}` and code is embedded between curly brackets and percent signs {% code %} 
+To add logic to a template, variables go between mustaches `{{variables}}` and code is embedded between curly brackets and percent signs {% code %}
 ```python
 <h1>{{name}}'s cart </h1>
 <table>
@@ -41,7 +41,7 @@ template_vars = {"pets" : {'willie': {'kind': 'dog', 'owner': 'eric'},
     <p>
      {{pet_name.title()}} is a {{pet_information['kind']}} who is owned by {{pet_information['owner']}}.
     </p>
-{% endfor %} 
+{% endfor %}
 ```
 
 ###Logic in Templates Challenge
@@ -49,14 +49,14 @@ template_vars = {"pets" : {'willie': {'kind': 'dog', 'owner': 'eric'},
 Change our `<h2>` to wish our user a great day. First, write a list containing the “good day” messages. Then use the GET method to read a new template variable called `msg_times`. This number will be passed to our template so it knows  how many “good day” messages to show.
 
 * Add good_day_list to the HelloWorld handler
-good_day_list = [“Have a Great Day”, “Have en god dag!”, “ “Bonne journée !”, “Que pase un buen día!”]
+good_day_list = ["Have a Great Day", "Have en god dag!", "Bonne journee !", "Que pase un buen dia!"]
 
 * Change the HelloWorld handler so that the new template variable, `msg_times` can be read via the GET method and passed to the template
 
-* Add loop logic to your template so that 
+* Add loop logic to your template so that
 `http://localhost:8080/helloworld?msg_num=2`
   Should show the first two messages:
-  * Have a Great Day 
+  * Have a Great Day!
   * Have en god dag!
 
 * Add a conditional statement so that
@@ -66,12 +66,12 @@ and
 get handled appropriately.
 
 
-### Stretch Lab: 
-Create a brand new template and handler called GoodbyeWorld that renders an entirely new template, goodbyeworld.html. 
+### Stretch Lab:
+Create a brand new template and handler called GoodbyeWorld that renders an entirely new template, goodbyeworld.html.
 * Include at least one conditional statement
 * Pass data from the GoodbyeWorld handler via the GET method url
-* Include a loop that prints outs 'Goodbye' in many different languages. goodbye_list = [“Goodbye”,“Adios”, “Ciao”, “Arrivederci”]
-* Make sure to edit the routes so that 
+* Include a loop that prints outs 'Goodbye' in many different languages. goodbye_list = ["Goodbye","Adios", "Ciao", "Arrivederci"]
+* Make sure to edit the routes so that
 `http://localhost:8080/helloworld`
 and
 `http://localhost:8080/goodbyeworld`
