@@ -46,12 +46,12 @@ template_vars = {"pets" : {'willie': {'kind': 'dog', 'owner': 'eric'},
 
 ###Logic in Templates Challenge
 ###Challenge
-Change our `<h2>` to wish our user a great day. First, write a list containing the “good day” messages. Then use the GET method to read a new template variable called `msg_times`. This number will be passed to our template so it knows  how many “good day” messages to show.
+Change our `<h2>` to wish our user a great day. First, write a list containing the “good day” messages. Then read a new template variable called `msg_times` from a query parameter. This number will be passed to our template so it knows  how many “good day” messages to show.
 
 * Add good_day_list to the HelloWorld handler
 good_day_list = ["Have a Great Day", "Have en god dag!", "Bonne journee !", "Que pase un buen dia!"]
 
-* Change the HelloWorld handler so that the new template variable, `msg_times` can be read via the GET method and passed to the template
+* Change the HelloWorld handler so that the new template variable, `msg_times` can be read from a query parameter and passed to the template.
 
 * Add loop logic to your template so that
 `http://localhost:8080/helloworld?msg_num=2`
