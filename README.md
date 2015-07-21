@@ -69,7 +69,7 @@ get handled appropriately.
 ### Stretch Lab:
 Create a brand new template and handler called GoodbyeWorld that renders an entirely new template, goodbyeworld.html.
 * Include at least one conditional statement
-* Pass data from the GoodbyeWorld handler via the GET method url
+* Pass data from the GoodbyeWorld handler via a query parameter in the url
 * Include a loop that prints outs 'Goodbye' in many different languages. goodbye_list = ["Goodbye","Adios", "Ciao", "Arrivederci"]
 * Make sure to edit the routes so that
 `http://localhost:8080/helloworld`
